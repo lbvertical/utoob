@@ -1,0 +1,12 @@
+<h1>Edit a comment for <%= @movie.title %></h1>
+
+<h2 id ='utoob-h2'>Itoob, Utoob, we all toob for Utoob!</h2>
+
+
+<h5>Edit comment</h5>
+<%= form_for [@movie, @comment] do |f| %>
+ <%= f.label :body %>
+ <%= f.text_field :body, required: true %>
+ <br />
+ <%= f.submit %>
+<% end %>

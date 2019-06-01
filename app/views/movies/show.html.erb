@@ -1,0 +1,70 @@
+<h1>Watch the <%=@movie.title%> trailer on Utoob!</h1>
+
+<body>
+<h2 id ='utoob-h2'>Itoob, Utoob, we all toob for Utoob!</h2>
+<div id="trailer">
+<iframe width="560" height="315" src="<%=@movie.trailer%>" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<div id="movie-info">
+  <ul>
+    <li>
+    <span>Movie Description: </span>
+    <a href = "<%= @movie.description %>" target = "_self"> IMDB Movie Description Here</a>
+    </li>
+    <li>
+      <span>Movie Genre: </span>
+      <%= @movie.genre %>
+    </li>
+    <li>
+    <span>Movie Duration: </span>
+      <%= @movie.duration %>
+    </li>
+  </ul>
+</div>
+
+<div id="movie-crud">
+  <ul>
+    <li>
+      <%= link_to 'Edit Movie', edit_movie_path(@movie) %>
+    </li>
+    <li>
+      <%= link_to 'Delete Movie', @movie, method: :delete %>
+    </li>
+  </ul>
+</div>
+
+<div id="movie-comments">
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+<h3>User comments</h3>
+  <ul>
+  <% @movie.comments.each do |comment| %>
+    <li id="comment-item">
+
+      <span>"</span>
+      <%= comment.body %>
+      <span>"</span>
+      <%= link_to 'Edit Comment', edit_movie_comment_path(@movie, comment.id) %>
+      <%= link_to 'Delete Comment', movie_comment_path(@movie, comment), method: :delete %>
+    </li>
+    <% end %>
+  </ul>
+</div>
+
+<div id='new-comment'>
+  <%= link_to 'Add a comment', new_movie_comment_path(@movie) %>
+</div>
+
+
+</body>

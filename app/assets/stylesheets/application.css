@@ -1,0 +1,107 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ul{
+  list-style-type: none;
+    color: white;
+}
+
+ul#horizontal-list {
+  margin: 0;
+  padding: 40px;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+ul#horizontal-list li {
+  display: inline;
+  padding: 8px;
+}
+
+#trailer{
+  float: left;
+  padding-right: 25px;
+  padding-left: 40px;
+}
+
+h1 {
+  padding-left: 40px;
+  padding-right: 40px;
+  color: white;
+}
+
+h2 {
+  padding-left: 40px;
+  padding-right: 40px;
+  color: white;
+}
+
+h3 {
+  padding-left: 40px;
+  padding-right: 40px;
+  color: white;
+}
+
+p {
+  padding-left: 40px;
+  padding-right: 40px;
+  font-size: 1.3em;
+  color: white;
+}
+
+body {
+  background-color: #6a5acd;
+  font-family: 'Cantarell', sans-serif;
+}
+
+ol#board-items {
+  text-transform: capitalize;
+  font-size: 1.3em;
+}
+
+span#artist-span {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+a:visited {
+  color: rgb(202, 202, 202);
+}
+
+a {
+  color: white;
+}
+
+#movie-comments {
+ padding-left: 40px;
+}
+
+#new-comment {
+ padding-left: 40px;
+}
+
+#comment-item{
+  padding-top: 15px;
+}
+
+#form-style{
+  color: white;
+  padding-left: 40px;
+  padding-top: 30px;
+}
+
+
+

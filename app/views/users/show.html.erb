@@ -1,0 +1,56 @@
+<h1>Utoob Profile for <%= @user.name %></h1>
+
+<body>
+<h2 id ='utoob-h2'>Itoob, Utoob, we all toob for Utoob!</h2>
+
+  <div id='user-info'>
+    <ul>
+      <li>
+        <%= @user.email %>
+      </li>
+      <li>
+        <%= @user.password %>
+      </li>
+    </ul>
+  </div>
+
+
+  <div id= 'user-crud'>
+      <ul>
+      <li>
+        <%= link_to 'Edit Utoob Profile', edit_user_path(@user) %>
+      </li>
+      <li>
+        <%= link_to 'Delete Utoob Profile', @user, method: :delete %>
+      </li>
+    </ul>
+  </div>
+
+<div id="user-comments">
+  <ul>
+  <% @user.comments.each do |f| %>
+    <li>
+      <%= f.user.name %>
+      <span> Says: </span>
+      </br>
+      <span>"</span>
+      <%= f.body %>
+      <span>"</span>
+      </br>
+      <span>On: </span>
+      <%= f.movie.title %> 
+    </li>
+    <% end %>
+  </ul>
+</div>
+
+
+    <div>
+  </div>
+
+
+
+    <div>
+  </div>
+
+</body>

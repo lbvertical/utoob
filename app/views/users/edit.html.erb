@@ -1,0 +1,13 @@
+<h1>Update your Utoob profile!</h1>
+
+<%= form_for(@user) do |f| %>
+ <div class="field">
+   <%= f.label :name %>
+   <%= f.text_field :name, required: true, autofocus: true %>
+    <%= f.label :password %>
+   <%= f.text_field :password, required: true %>
+    <%= f.label :email %>
+   <%= f.text_field :email, required: true%>
+   <%= f.submit %>
+ </div>
+<% end %>
